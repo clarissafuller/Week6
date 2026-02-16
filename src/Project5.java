@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Project5 {
-
     // Main Method
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -20,14 +19,19 @@ public class Project5 {
     // Method to format the number with leading zeros
     public static String format(int number, int width) {
         // convert the integer to a String
-        // determine the length of the number string
-        // if the length is greater than or equal to width
-        // return the original number string
-        // otherwise
-        // calculate how many zeros are needed
-        // create a string containing the required number of leading zeros
-        // concatenate the zeros and the original number string
-        // return the formatted string
-        return "";
+        String numberString = Integer.toString(number);
+        // if the number's length is greater than or equal to width
+        if (numberString.length() >= width) {
+            return numberString;
+        }
+        // otherwise, calculate how many zeros are needed
+        int zerosNeeded = width - numberString.length();
+        // build a string of leading zeros
+        String zeroString = "";
+        for (int i = 0; i < zerosNeeded; i++) {
+            zeroString += "0";
+        }
+        // return zeros + original number
+        return zeroString + numberString;
     }
-}
+    }
