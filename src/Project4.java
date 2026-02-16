@@ -8,13 +8,23 @@
 //        154:19:10
 //
 
+import java.util.Scanner;
+
 public class Project4 {
     //Main Method
-    //prompt user to enter a value for milliseconds
-    //convert milliseconds to total seconds
-    //calculate hours using total seconds
-    //calculate remaining seconds after hours
-    //calculate minutes from remaining seconds
-    //calculate remaining seconds after minutes
-    //return string formatted as hours:minutes:seconds
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        //prompt user to enter a value for milliseconds
+        System.out.print("Enter time in milliseconds:");
+        long millis = input.nextLong();
+    }
+    public static String convertMillis ( long millis){
+            //convert milliseconds to total seconds
+            //calculate hours using total seconds
+            //calculate remaining seconds after hours
+            //calculate minutes from remaining seconds
+            //calculate remaining seconds after minutes
+            //return string formatted as hours:minutes:seconds
+        return "";
+    }
 }
