@@ -15,16 +15,27 @@ public class Project4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         //prompt user to enter a value for milliseconds
-        System.out.print("Enter time in milliseconds:");
+        System.out.print("Enter time in milliseconds: ");
         long millis = input.nextLong();
+
+        String result = convertMillis(millis);
+        System.out.println(result);
+
+
     }
     public static String convertMillis ( long millis){
             //convert milliseconds to total seconds
+        long totalSeconds = millis / 1000;
             //calculate hours using total seconds
+        long hours = totalSeconds / 3600;
             //calculate remaining seconds after hours
+        long remainingSeconds = totalSeconds % 3600;
             //calculate minutes from remaining seconds
+        long minutes = remainingSeconds / 60;
             //calculate remaining seconds after minutes
+        long seconds = remainingSeconds % 60;
             //return string formatted as hours:minutes:seconds
-        return "";
+        return hours + ":" + minutes + ":" + seconds;
+
     }
 }
